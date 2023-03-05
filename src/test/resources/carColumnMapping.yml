@@ -1,0 +1,15 @@
+---
+factTable:
+  tableName: car_fact
+  dateColumn: booking_date
+  columnMap:
+    supplier_id: car_id
+    quarter_of_the_year: quarter(booking_date)
+    total_cost: sum(cost)
+    total_fees: sum(fees)
+    total_taxes: sum(taxes)
+dimTable:
+  tableName: car_dim
+  columnMap:
+    supplier_name: car_name
+    supplier_address: car_address

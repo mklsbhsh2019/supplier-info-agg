@@ -1,0 +1,15 @@
+---
+factTable:
+  tableName: property_fact
+  dateColumn: booking_date
+  columnMap:
+    supplier_id: property_id
+    quarter_of_the_year: quarter(booking_date)
+    total_cost: sum(cost)
+    total_fees: sum(fees)
+    total_taxes: sum(taxes)
+dimTable:
+  tableName: property_dim
+  columnMap:
+    supplier_name: property_name
+    supplier_address: property_address
